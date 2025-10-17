@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Formulir Pendaftaran Acara</h1>
+        <p>Silakan isi data Anda di bawah ini. Data akan langsung terkirim ke email panitia.</p>
+
+        <form id="contactForm">
+            <input type="hidden" name="access_key" value="GANTI_DENGAN_ACCESS_KEY_ANDA">
+
+            <div class="form-group">
+                <label for="name">Nama Lengkap:</label>
+                <input type="text" id="name" name="nama" required placeholder="Masukkan nama Anda...">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Alamat Email:</label>
+                <input type="email" id="email" name="email" required placeholder="contoh@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Pesan (Opsional):</label>
+                <textarea id="message" name="pesan" rows="4" placeholder="Tinggalkan pesan singkat..."></textarea>
+            </div>
+
+            <button type="submit">Kirim Data</button>
+        </form>
+        <div id="result"></div>
+
+        <div class="submission-list" id="submissionListContainer">
+            <h2>Daftar yang Sudah Mengisi</h2>
+            <ul id="submissionList">
+                </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
